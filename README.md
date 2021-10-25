@@ -1,6 +1,6 @@
 # Desarrollo de aplicaciones entorno cliente
 <details>
-    <summary>Práctica 0</sumary>
+    <summary>Práctica 0</summary>
 
     ## Práctica 0
     ###  Ataque DoS y DDos. Información sobre cada uno de estos conceptos y un detallar un ejemplo destacado sobre cada uno de estos.
