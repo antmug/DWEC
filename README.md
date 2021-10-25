@@ -1,7 +1,7 @@
 # Desarrollo de aplicaciones entorno cliente
 <details>
     <summary>Práctica 0</summary>
-        https://github.com/antmug/DWEC/tree/main/P0
+            * [Maven](https://maven.apache.org/)
 
 </details>
 <details>
