@@ -5,6 +5,7 @@
 [P0](https://github.com/antmug/DWEC/tree/main/P0)
 
 </details>
+
 <details>
     <summary>Práctica 1</summary>
 
