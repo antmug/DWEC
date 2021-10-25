@@ -43,9 +43,21 @@ Hoy en día se ha dado paso al cifrado AES, el cual es más robusto dado que pue
 
 Un pequeño ejemplo de texto cifrado mediante DES:
 
-8787878787878787 (nuestro texto plano)
-0E329232EA6D0D73 (cifrado seleccionado)
-0000000000000000 (texto cifrado que se obtiene)
+Nuestro texto plano
+
+```
+8787878787878787
+```
+Cifrado seleccionado
+
+```
+0E329232EA6D0D73 
+```
+Texto cifrado que se obtiene
+
+```
+0000000000000000
+```
 
 ## Ataque MID Información detallada sobre este tipo de ataque y ejemplo que explique su funcionamiento. Mencionar también un ejemplo conocido de ataque MID
 
