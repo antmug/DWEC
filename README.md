@@ -5,5 +5,5 @@
 </details>
 <details>
     <summary>Práctica 1</summary>
-        https://github.com/antmug/DWEC/tree/main/Tema%201
+        https://github.com/antmug/DWEC/blob/main/Tema%201/P1.md
 </details>
