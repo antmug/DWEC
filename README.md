@@ -12,3 +12,14 @@
 [P1](https://github.com/antmug/DWEC/blob/main/Tema%201/P1.md)
 
 </details>
+
+<details>
+    <summary>Tema 2</summary>
+
+[P2](https://github.com/antmug/DWEC/blob/main/Tema%202/P2.md)
+
+[P3](https://github.com/antmug/DWEC/blob/main/Tema%202/P3.md)
+
+[P4](https://github.com/antmug/DWEC/blob/main/Tema%202/P4.md)
+
+</details>
