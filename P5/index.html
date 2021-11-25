@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="Persona.js"></script>
+    <script src="Tabla.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Práctica</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Práctica de JavaScript</h1>
+        <h4>Práctica número 5</h4>
+    </header>
+
+    <div>    
+        <table class="table table-hover" id="tabla"></table>
+
+        <div id="botones">
+            <button type="button" class="btn-success"
+                onclick="añadir(prompt('Introduzca el nombre'), 
+                prompt('Introduzca el primer apellido'), 
+                prompt('Introduzca el segundo apellido'))">Añadir persona</button>
+
+
+            <button type="button" class="btn-success" 
+            onclick="borrar()">Borrar persona</button>
+        </div>
+    </div>
+    <script>actualizar();</script>
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+          <small>Copyright &copy; Antonio Muñoz García</small>
+        </div>
+    </footer>
+</body>
+</html>

@@ -23,3 +23,10 @@
 [P4](https://github.com/antmug/DWEC/blob/main/Tema%202/P4.md)
 
 </details>
+
+<details>
+    <summary>Práctica</summary>
+
+[P5](https://github.com/antmug/DWEC/blob/main/P5)
+
+</details>
