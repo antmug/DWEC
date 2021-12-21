@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Tarea</title>
+</head>
+<body style="background-color: aquamarine;">
+    <script>
+        function checkForm(){
+            var xnombre = [document.forms["vform"]["nombre"].value];
+            var xapellido1 = [document.forms["vform"]["apellido1"].value];
+            var xapellido2 = [document.forms["vform"]["apellido2"].value];
+            var xgenero = [document.forms["vform"]["genero"].value];
+            var xfecha = [document.forms["vform"]["fecha"].value];
+            var xcorreo = [document.forms["vform"]["correo"].value];
+            var xcontraseña =[document.forms["vform"]["contraseña"].value];
+
+        alert("Nombre: " + xnombre  + "\nPrimer Apellido: " + xapellido1 + 
+        "\nSegundo Apellido: " + xapellido2 + "\nGénero: " + xgenero + 
+        "\nFecha de nacimiento: " + xfecha + "\nCorreo electrónico: " + xcorreo + 
+        "\nContraseña: " + xcontraseña);
+        }
+    </script>
+        <div class="container" style="max-width: 40%;">
+            <form name="vform" action="server.php" onsubmit="return checkForm()" method="POST">
+                <div class="form-group">
+                    <label for="vname">Nombre: </label>
+                    <input class="form-control" type="text" id="vname" name="nombre" required>
+
+                    <label for="vsurname1">Primer Apellido: </label>
+                    <input class="form-control" type="text" id="vsurname1" name="apellido1" required>
+
+                    <label for="vsurname2">Segundo Apellido: </label>
+                    <input class="form-control" type="text" id="vsurname1" name="apellido2" required><br>
+
+                    <div class="form-check" style="text-align:center">
+                        <label for="vgender">Sexo: </label>
+                        <input class="form-check-label" type="radio" id="vmasc" name="genero" value="masc">
+                        <label for="vmasc">Masculino</label>
+
+                        <input class="form-check-label" type="radio" id="vfem" name="genero" value="fem">
+                        <label for="vfem">Femenino</label>
+                    </div>
+
+                    <label for="vdate">Fecha de nacimiento: </label>
+                    <input class="form-control" type="date" id="vdate" name="fecha" required>
+
+                    <label for="vmail">Email: </label>
+                    <input class="form-control"type="email" id="vmail" name="correo" required>
+
+                    <label for="vpassword">Contraseña: </label>
+                    <input class="form-control" type="password" id="vpassword" name="contraseña">
+
+                </div>
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

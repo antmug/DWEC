@@ -30,3 +30,10 @@
 [P5](https://github.com/antmug/DWEC/blob/main/P5)
 
 </details>
+
+<details>
+    <summary>P6</summary>
+
+[P5](https://github.com/antmug/DWEC/blob/main/P6)
+
+</details>

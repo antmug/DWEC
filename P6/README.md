@@ -1,0 +1,8 @@
+# Desarrollo de aplicaciones entorno cliente
+En primer lugar he realizado el esquema del formulario siguiendo los pasos que se indican en el tema 8. He introducido los campos de Nombre, Primer Apellido, Segundo Apellido con el type text, dado que solo van a ser campos de texto donde el usuario va a introducir sus datos. Despues he incluido el Género mediante el tipo radio, dado que las opciones masculino y femenino deben aparecer para ser seleccionadas. Por último, he introducido el apartado Fecha de nacimiento gracias al type date, el correo electronico mediante el type email para que compruebe que se ha introducido una @, y la contraseña mediante el type password, para que no aparezcan las letras introducidas en el campo contraseña. A todos los campos anteriormente indicados se le ha añadido el elemento required, para que de esta manera, el usuario deba introducir todos los datos que se preguntan (salvo el género, el cual no se requiere obligatoriamente).
+
+Para terminar el formulario, he agregado un input con type submit para poder ir a server.php y enviar los datos a esa página.
+
+Una vez realizado el formulario, se ha procedido a incluir la funcion de JS para que los datos introducidos por el usuario nos aparezcan en pantalla y nos realice la validación de los datos. Para ello he creado una variable para cada dato y le he indicado a qué elemento del formulario pertenece para que obtenga su valor para poder mostrarlo.
+
+Para terminar la práctica, he añadido algo de Bootstrap para que el formulario esté mejor visto, aunque solo he indicado los grupos de form, cada campo de texto y algo de color de fondo.
