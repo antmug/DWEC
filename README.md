@@ -25,7 +25,7 @@
 </details>
 
 <details>
-    <summary>Práctica</summary>
+    <summary>P5</summary>
 
 [P5](https://github.com/antmug/DWEC/blob/main/P5)
 
@@ -34,6 +34,13 @@
 <details>
     <summary>P6</summary>
 
-[P5](https://github.com/antmug/DWEC/blob/main/P6)
+[P6](https://github.com/antmug/DWEC/blob/main/P6)
+
+</details>
+
+<details>
+    <summary>P7</summary>
+
+[P7](https://github.com/antmug/DWEC/blob/main/P7)
 
 </details>
