@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Tarea</title>
+</head>
+<body style="background-color: aquamarine;">
+        <div class="container" style="max-width: 40%;">
+            <h4 id="window"></h4>
+            <form name="vform" action="server.php" onsubmit="return checkForm()" method="POST">
+                <div class="form-group">
+                    <label for="vname">Nombre de usuario: </label>
+                    <input class="form-control" type="text" id="vname" name="nombre" required>
+                    
+                    <label for="vpassword">Contraseña: </label>
+                    <input class="form-control" type="password" id="vpassword" name="contraseña" required>
+                    <p id="aviso" style="display:none; color:red">Mayúsculas activadas</p>
+                    
+                    <a href="#">He olvidado la contraseña</a>
+
+                </div>
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </form>
+    </div>
+    <script>
+        function Mayusculas(){
+            var may = document.getElementById("vpassword");
+            var aviso = document.getElementById("aviso");
+            
+            may.addEventListener("keyup", function(event){
+                if(event.getModifierState("CapsLock")){
+                    aviso.style.display = "block";
+                }else{
+                    aviso.style.display = "none";
+                }
+            });
+        }
+        Mayusculas();
+
+        function ventana(){
+            var ancho = window.innerWidth;
+            var alto = window.innerHeight;
+
+            var medidas = document.getElementById("window");
+            medidas.innerHTML = "Altura de la ventana: " + alto + "px" + "</br>" +
+                                "Ancho de la ventana: " + ancho + "px";
+        }
+        ventana();
+        setInterval("ventana()",1000);
+        
+
+        
+        window.addEventListener("DOMContentLoaded",function(){
+        document.querySelector("a").addEventListener("click",Aviso);
+        document.querySelector("a").addEventListener("dblclick",Video);
+        })
+
+
+        function Aviso(){
+        setTimeout(function(){
+        alert("No tienes permisos de superusuario para restablecerla")
+        }, 300);
+
+        }
+        function Video(){
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
+
+
+
+    </script>
+</body>
+</html>
