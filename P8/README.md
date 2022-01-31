@@ -1,4 +1,4 @@
-##Práctica de introducción de Star Wars##
+## Práctica de introducción de Star Wars
 
 **Funcionalidad de la práctica**
 
