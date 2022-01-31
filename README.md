@@ -44,3 +44,10 @@
 [P7](https://github.com/antmug/DWEC/blob/main/P7)
 
 </details>
+
+<details>
+    <summary>P8</summary>
+
+[P8](https://github.com/antmug/DWEC/blob/main/P8)
+
+</details>
