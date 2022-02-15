@@ -51,3 +51,10 @@
 [P8](https://github.com/antmug/DWEC/blob/main/P8)
 
 </details>
+
+<details>
+    <summary>P9</summary>
+
+[P9](https://github.com/antmug/DWEC/blob/main/P9)
+
+</details>
