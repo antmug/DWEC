@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>P9</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div>
+        <div id="inicio">
+
+            <table id="tabla-centros" class="table">
+
+            </table>
+
+        </div>
+        <br>
+        <div id="datos">
+            <table id="tabla-datos" class="table">
+
+            </table>
+
+        </div>
+        <div class="mapa">
+
+        </div>
+    </div>
+    <script async>
+       
+        function cargarCentros(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    cargarXML(this);
+                    console.log("hola");
+                }else{
+                    console.log("otro");
+                }
+            };
+       
+            xhr.open("GET","centros.xml",true);
+     
+            xhr.send();
+          
+        }
+
+        function cargarXML(xml){
+            var docXML = xml.responseXML;
+            var tabla = "<thead class='thead-light'><tr><th>Nombre</th><th>Dirección</th><th>Latitud</th><th>Longitud</th><th>Mas informacion</th></tr></thead>";
+            console.log(docXML);
+            var cent = docXML.getElementsByTagName("centro");
+            for(var i=0; i<cent.length; i++){
+                tabla += "<tr><td>";
+                tabla += cent[i].getElementsByTagName("nombre")[0].textContent;
+                tabla += "</td><td>";
+                tabla += cent[i].getElementsByTagName("direccion")[0].textContent;
+                tabla += "</td><td>";
+                tabla += cent[i].getElementsByTagName("latitud")[0].textContent;
+                tabla += "</td><td>";
+                tabla += cent[i].getElementsByTagName("longitud")[0].textContent;
+                tabla += "</td><td>";
+                tabla += "<button type='submit' class='btn btn-primary' id='" + cent[i].getElementsByTagName('nombre')[0].textContent +"'>Buscar</button>";
+                tabla += "</td></tr>"
+            }
+            
+            document.getElementById("tabla-centros").innerHTML = tabla;
+
+                    
+        document.getElementById("MEDAC_Cordoba").addEventListener("click",function(){cargarDatos("MEDAC%20Cordoba")});
+        document.getElementById("MEDAC_Arena").addEventListener("click",function(){cargarDatosArena("MEDAC%20Arena")});
+        }
+        cargarCentros();
+        
+
+
+        function cargarDatos(centro){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    cargarXML(this);
+                }
+            };
+       
+            xhr.open("GET","baresCordoba.xml",true);
+     
+            xhr.send();
+
+            function cargarXML(xml){
+            var docXML = xml.responseXML;
+            var tabla1 = "<thead class='thead-light'><tr><th>Nombre</th><th>Dirección</th><th>Latitud</th><th>Longitud</th><th>Puntuacion Google</th></tr></thead>";
+            console.log(docXML);
+            var cord = docXML.getElementsByTagName("bar");
+            for(var i=0; i<cord.length; i++){
+                tabla1 += "<tr><td>";
+                tabla1 += cord[i].getElementsByTagName("nombre")[0].textContent;
+                tabla1 += "</td><td>";
+                tabla1 += cord[i].getElementsByTagName("direccion")[0].textContent;
+                tabla1 += "</td><td>";
+                tabla1 += cord[i].getElementsByTagName("latitud")[0].textContent;
+                tabla1 += "</td><td>";
+                tabla1 += cord[i].getElementsByTagName("longitud")[0].textContent;
+                tabla1 += "</td><td>";
+                tabla1 += cord[i].getElementsByTagName("puntuacion")[0].textContent;
+                tabla1 += "</td></tr>"
+            }
+            
+            document.getElementById("tabla-datos").innerHTML = tabla1;
+        }
+        $(".mapa").empty();
+              $(".mapa").append(
+                `<img class="rounded-2xl" width="600" src="https://maps.googleapis.com/maps/api/staticmap?center=${centro}&zoom=17&scale=1&size=600x300&maptype=roadmap&key=AIzaSyCe6vLtNKcC6H585-oKcNXXUDA2fOALEs8&format=png&visual_refresh=true" alt="Google Map of MEDAC Arena">`
+              );
+          
+        }
+
+        function cargarDatosArena(centro){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    cargarXML(this);
+                }
+            };
+       
+            xhr.open("GET","baresArena.xml",true);
+     
+            xhr.send();
+
+            function cargarXML(xml){
+            var docXML = xml.responseXML;
+            var tabla2 = "<thead class='thead-light'><tr><th>Nombre</th><th>Dirección</th><th>Latitud</th><th>Longitud</th><th>Puntuacion Google</th></tr></thead>";
+            console.log(docXML);
+            var are = docXML.getElementsByTagName("bar");
+            for(var i=0; i<are.length; i++){
+                tabla2 += "<tr><td>";
+                tabla2 += are[i].getElementsByTagName("nombre")[0].textContent;
+                tabla2 += "</td><td>";
+                tabla2 += are[i].getElementsByTagName("direccion")[0].textContent;
+                tabla2 += "</td><td>";
+                tabla2 += are[i].getElementsByTagName("latitud")[0].textContent;
+                tabla2 += "</td><td>";
+                tabla2 += are[i].getElementsByTagName("longitud")[0].textContent;
+                tabla2 += "</td><td>";
+                tabla2 += are[i].getElementsByTagName("puntuacion")[0].textContent;
+                tabla2 += "</td></tr>"
+            }
+            
+            document.getElementById("tabla-datos").innerHTML = tabla2;
+            
+        }
+        $(".mapa").empty();
+              $(".mapa").append(
+                `<img class="rounded-2xl" width="600" src="https://maps.googleapis.com/maps/api/staticmap?center=${centro}&zoom=17&scale=1&size=600x300&maptype=roadmap&key=AIzaSyCe6vLtNKcC6H585-oKcNXXUDA2fOALEs8&format=png&visual_refresh=true" alt="Google Map of MEDAC Arena">`
+              );
+
+        
+        }
+        
+    </script>
+</body>
+</html>
